@@ -88,9 +88,9 @@ WSGI_APPLICATION = 'disquaire_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql', # on utilise l'adaptateur postgresql
-        'NAME': 'disquaire', # le nom de notre base de données créée précédemment
-        'USER': 'celinems', # attention : remplacez par votre nom d'utilisateur !!
-        'PASSWORD': '',
+        'NAME': 'disquaire', # le nom de notre base de donnes prepecedemment
+        'USER': 'moctar', # attention : remplacez par votre nom d'utilisateur !!
+        'PASSWORD': 'moctar',
         'HOST': '',
         'PORT': '5432',
     }
@@ -122,7 +122,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'fr'
 
-TIME_ZONE = 'Europe/Paris'
+TIME_ZONE = 'Europe/London'
 
 USE_I18N = True
 
@@ -142,7 +142,7 @@ INTERNAL_IPS = ['127.0.0.1']
 
 if os.environ.get('ENV') == 'PRODUCTION':
 
-    STATIC_ROOT = os.path.join(BASE_ROOT, 'staticfiles')
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
     # Simplified static file serving.
     # https://warehouse.python.org/project/whitenoise/
